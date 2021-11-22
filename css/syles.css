@@ -117,8 +117,11 @@ body {
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--main-text-color);
+  display: flex;
+  align-items: center;
 }
-.header-contact-link:hover {
+.header-contact-link:hover,
+.header-contact-link:focus {
   color: var(--accent-color);
 }
 
@@ -323,6 +326,9 @@ fill: var(--second-title-color);
 .clients-list{
 display: flex;
 }
+.cliets-item:not(:last-child) {
+margin-right: 30px;
+}
 .cliets-link{
   width: 170px;
   height: 92px;
@@ -332,7 +338,6 @@ display: flex;
   border: 1px solid #AFB1B8;
   box-sizing: border-box;
   border-radius: 4px;
-  margin-right: 30px;
   }
 
 .clients-icon{
@@ -341,10 +346,12 @@ display: flex;
 .clients-icon:hover{
   fill: var(--accent-color);
 }
-.cliets-link:hover{
+.cliets-link:hover,
+.cliets-link:focus{
 border-color: var(--accent-color);
 }
-.cliets-link:hover .clients-icon{
+.cliets-link:hover .clients-icon,
+.cliets-link:focus .clients-icon {
   fill: var(--accent-color);
   border-color: var(--accent-color);
 }
@@ -353,15 +360,15 @@ border-color: var(--accent-color);
   background-color: #2f303a;
   padding-top: 60px;
   padding-bottom: 60px;
-  display: flex;
 }
 .footer-container{
-  width: 231px;
-  height: 132px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-left: 115px;
+  display: flex;
+}
+.main-footer-container{
+  display: flex;
+  align-items:baseline;
   margin-right: 70px;
+  flex-direction: column;
 }
 .footer-logo {
   font-family: Raleway;
@@ -394,10 +401,7 @@ border-color: var(--accent-color);
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
 }
-.social-container{
-  width: 206px;
-  height: 80px;
-}
+
 .social-title {
   font-weight: 700;
   font-size: 14px;
@@ -490,7 +494,11 @@ fill: var(--second-title-color);
   margin-right: 30px;
   margin-bottom: 30px;
 }
-.portfolio-item:hover{
+.portfolio-link{
+  display: block;
+}
+.portfolio-link:focus,
+.portfolio-link:hover{
 box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 .portfolio-item:nth-child(n + 7) {
